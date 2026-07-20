@@ -3,6 +3,7 @@ import { projects, getProjectBySlug } from "../data/projects.js";
 import Nav from "../components/Nav.jsx";
 import Footer from "../components/Footer.jsx";
 import ChallengeLog from "../components/ChallengeLog.jsx";
+import Reveal from "../components/Reveal.jsx";
 
 export default function ProjectPage() {
   const { slug } = useParams();
@@ -18,8 +19,9 @@ export default function ProjectPage() {
 
   return (
     <>
-      <div className="page">
-        <Nav />
+      <Nav />
+      <main className="site-body project-detail">
+        <div className="page">
         <Link className="back-link" to="/">
           ← All projects
         </Link>
@@ -55,22 +57,22 @@ export default function ProjectPage() {
         </dl>
 
         <section className="section" style={{ paddingTop: 0 }}>
-          <p className="eyebrow">// summary</p>
+          <p className="eyebrow">./summary</p>
           <p className="project-body__intro">{project.summary}</p>
         </section>
 
-        <section className="section">
-          <p className="eyebrow">// objectives</p>
+        <Reveal as="section" className="section">
+          <p className="eyebrow">./objectives</p>
           <h2 className="section-title">What it set out to do</h2>
           <ul className="checklist">
             {project.objectives.map((o) => (
               <li key={o}>{o}</li>
             ))}
           </ul>
-        </section>
+        </Reveal>
 
-        <section className="section">
-          <p className="eyebrow">// stack</p>
+        <Reveal as="section" className="section">
+          <p className="eyebrow">./stack</p>
           <h2 className="section-title">Technologies &amp; tools used</h2>
           <div className="tag-row">
             {project.techUsed.map((t) => (
@@ -79,20 +81,20 @@ export default function ProjectPage() {
               </span>
             ))}
           </div>
-        </section>
+        </Reveal>
 
-        <section className="section">
-          <p className="eyebrow">// achievements</p>
+        <Reveal as="section" className="section">
+          <p className="eyebrow">./achievements</p>
           <h2 className="section-title">What it actually does</h2>
           <ul className="checklist">
             {project.achievements.map((a) => (
               <li key={a}>{a}</li>
             ))}
           </ul>
-        </section>
+        </Reveal>
 
-        <section className="section">
-          <p className="eyebrow">// visuals</p>
+        <Reveal as="section" className="section">
+          <p className="eyebrow">./visuals</p>
           <h2 className="section-title">Visuals</h2>
           {project.visuals.length > 0 ? (
             <div className="visual-gallery">
@@ -110,18 +112,18 @@ export default function ProjectPage() {
               project.
             </div>
           )}
-        </section>
+        </Reveal>
 
-        <section className="section">
-          <p className="eyebrow">// challenges &amp; solutions</p>
+        <Reveal as="section" className="section">
+          <p className="eyebrow">./challenges</p>
           <h2 className="section-title">Where it got hard</h2>
           <ChallengeLog challenges={project.challenges} />
-        </section>
+        </Reveal>
 
-        <section className="section">
-          <p className="eyebrow">// conclusion</p>
+        <Reveal as="section" className="section">
+          <p className="eyebrow">./conclusion</p>
           <div className="conclusion-block">{project.conclusion}</div>
-        </section>
+        </Reveal>
 
         <nav className="project-footer-nav">
           <Link className="btn btn--ghost" to={`/projects/${prev.slug}`}>
@@ -134,7 +136,8 @@ export default function ProjectPage() {
             {next.shortTitle} →
           </Link>
         </nav>
-      </div>
+        </div>
+      </main>
       <Footer />
     </>
   );

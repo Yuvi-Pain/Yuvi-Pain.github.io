@@ -1,28 +1,30 @@
-import { Link } from "react-router-dom";
-import { profile } from "../data/profile.js";
+import { useActiveSection } from "../hooks/useActiveSection.js";
+
+const LINKS = [
+  { id: "about", label: "./about" },
+  { id: "experience", label: "./experience" },
+  { id: "projects", label: "./projects" },
+  { id: "contact", label: "./contact" },
+];
 
 export default function Nav() {
-  const initials = profile.name
-    .split(" ")
-    .map((n) => n[0])
-    .join("");
+  const active = useActiveSection(LINKS.map((l) => l.id));
 
   return (
     <nav className="nav">
-      <Link to="/" className="nav__mark">
-        {initials}
-      </Link>
+      <a href="#top" className="nav__mark">
+        Yuvraj Bains
+      </a>
       <div className="nav__links">
-        <a href={`mailto:${profile.email}`}>Email</a>
-        <a href={profile.github} target="_blank" rel="noreferrer">
-          GitHub
-        </a>
-        <a href={profile.linkedin} target="_blank" rel="noreferrer">
-          LinkedIn
-        </a>
-        <a href={profile.resumeUrl} target="_blank" rel="noreferrer">
-          Resume
-        </a>
+        {LINKS.map((link) => (
+          <a
+            key={link.id}
+            href={`#${link.id}`}
+            className={active === link.id ? "nav__link nav__link--active" : "nav__link"}
+          >
+            {link.label}
+          </a>
+        ))}
       </div>
     </nav>
   );

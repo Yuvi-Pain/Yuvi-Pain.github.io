@@ -1,7 +1,7 @@
 export const profile = {
   name: "Yuvraj Bains",
-  role: "4th-Year Software Engineering Student, Co-op — Carleton University",
-  bio: "I'm a software engineering student with a strong interest in full-stack development. I like turning ideas into dependable, well-tested systems — from concurrent backend services to the apps that sit on top of them.",
+  role: "Software Engineering Student @ Carleton University",
+  bio: "I like building things that actually work under the hood — systems that talk to each other over a network, apps people click around in, and the occasional game on the side.",
   github: "https://github.com/Yuvi-Pain",
   linkedin: "https://www.linkedin.com/in/yuvraj-bains-a46348252",
   email: "yuvrajbains2003@gmail.com",
@@ -11,7 +11,7 @@ export const profile = {
 export const skillGroups = [
   {
     label: "Languages",
-    items: ["C", "Java", "JavaScript", "Python", "SQL", "HTML / CSS"],
+    items: ["C", "Java", "JavaScript", "Python", "HTML", "CSS"],
   },
   {
     label: "Frameworks & Libraries",

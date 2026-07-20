@@ -8,13 +8,13 @@ import Footer from "../components/Footer.jsx";
 export default function Home() {
   return (
     <>
-      <div className="page">
-        <Nav />
-      </div>
+      <Nav />
       <Hero />
-      <SkillsSection />
-      <ExperienceSection />
-      <ProjectsSection />
+      <main className="site-body">
+        <SkillsSection />
+        <ExperienceSection />
+        <ProjectsSection />
+      </main>
       <Footer />
     </>
   );
