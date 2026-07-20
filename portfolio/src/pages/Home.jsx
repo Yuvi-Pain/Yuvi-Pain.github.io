@@ -1,6 +1,7 @@
 import Nav from "../components/Nav.jsx";
 import Hero from "../components/Hero.jsx";
 import SkillsSection from "../components/SkillsSection.jsx";
+import ExperienceSection from "../components/ExperienceSection.jsx";
 import ProjectsSection from "../components/ProjectsSection.jsx";
 import Footer from "../components/Footer.jsx";
 
@@ -12,6 +13,7 @@ export default function Home() {
       </div>
       <Hero />
       <SkillsSection />
+      <ExperienceSection />
       <ProjectsSection />
       <Footer />
     </>

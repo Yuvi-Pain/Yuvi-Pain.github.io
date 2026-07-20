@@ -265,14 +265,8 @@ button:focus-visible {
    ============================================================ */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.25rem;
-}
-
-@media (max-width: 800px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .skill-card {
@@ -311,6 +305,48 @@ button:focus-visible {
   background: var(--surface-raised);
   color: var(--ink-soft);
   border-color: var(--line);
+}
+
+/* ============================================================
+   EXPERIENCE
+   ============================================================ */
+.experience-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.experience-entry {
+  border-left: 2px solid var(--signal-teal);
+  padding-left: 1.2rem;
+}
+
+.experience-entry__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.experience-entry h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin: 0 0 0.2rem;
+}
+
+.experience-entry__meta {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  margin: 0;
+}
+
+.experience-entry__period {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--signal-teal);
+  white-space: nowrap;
 }
 
 /* ============================================================

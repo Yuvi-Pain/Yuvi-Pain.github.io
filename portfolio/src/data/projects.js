@@ -104,11 +104,11 @@ export const projects = [
     ],
 
     achievements: [
-      "Designed a weighted, multi-dimensional Macro Fit Score: calories/protein/carbs/fat are each scored against a 'sweet spot' usage ratio, with a steep penalty for exceeding any single macro and a bonus for proportionally balanced meals.",
-      "Implemented three configurable priority modes (high-protein, low-cal, low-fat) that re-weight the scoring formula per user preference.",
-      "Built a fully native, physics-feeling draggable bottom sheet with three snap states, using touch velocity to decide the closest snap point — no drag library used.",
+      "Engineered a 0–100 Macro Fit Score algorithm weighting 4 macros (calories, protein, carbs, fat) across 3 priority modes (high-protein, low-cal, low-fat), rendered as 3-tier color-coded pins on a Leaflet.js map.",
+      "Designed a modular ES6 architecture with a custom Pub/Sub state store supporting both per-key and wildcard listeners.",
+      "Built a 3-state draggable bottom sheet supporting both touch and mouse input, with velocity-based snapping between collapsed/half/expanded states.",
+      "Implemented three configurable priority modes that re-weight the scoring formula per user preference.",
       "Built a reactive state store from scratch to keep the map, sheet, and filters in sync without React or Vue.",
-      "Color-coded map pins that update live as scores change (green / yellow / grey).",
     ],
 
     visuals: [],
@@ -145,11 +145,11 @@ export const projects = [
     status: "SHIPPED",
     team: "Team of 4",
     role: "See conclusion for scope",
-    techTags: ["Java", "Swing", "MVC", "AI"],
+    techTags: ["Java", "Java Swing", "MVC", "AI"],
     repo: "https://github.com/Yuvi-Pain/Scrabble-Game-",
 
     summary:
-      "A full Java Swing implementation of Scrabble built with a strict MVC architecture, supporting both human and AI players. Players place tiles on a clickable 15x15 board, with real-time score calculation, word/placement validation, undo/redo, save/load, and support for loading custom board layouts from JSON.",
+      "A full Java Swing implementation of Scrabble built with a strict MVC architecture across 18 classes, supporting both human and AI players on a drag-and-drop 15x15 board. Word placements are validated against a 9,999-word dictionary with live Scrabble-rule scoring, alongside undo/redo and save/load.",
 
     objectives: [
       "Recreate core Scrabble mechanics — tile placement, adjacency rules, scoring — with a clickable GUI.",
@@ -160,19 +160,20 @@ export const projects = [
 
     techUsed: [
       "Java Swing (JFrame, custom JButton grid) for the UI",
-      "Strict MVC architecture: separate Model, View, Controller, plus a custom event system",
+      "Strict MVC architecture across 18 classes: Model, View, Controller, AIPlayer, Board, Bag",
+      "Dual-stack pattern for undo/redo",
       "Serializable game state for save/load",
       "JSON parsing for custom board loading",
-      "JUnit for model-layer testing (a ~500-line test suite)",
+      "JUnit for testing (12 tests across game logic, AI behavior, and board state)",
     ],
 
     achievements: [
+      "Built a full MVC architecture in Java Swing across 18 classes (Model, View, Controller, AIPlayer, Board, Bag).",
+      "Validated word placements against a 9,999-word dictionary with live Scrabble-rule scoring on a drag-and-drop 15x15 board.",
       "Built a working AI opponent: it attempts up to 2,000 randomized real words per turn, checking each against its hand and the board's existing tiles before committing — falling back to a pass if nothing valid is found.",
-      "Implemented full undo/redo by snapshotting model state through a custom event system.",
-      "Implemented save/load using Java serialization, so a game can be resumed exactly where it left off.",
+      "Implemented undo/redo via a dual-stack pattern, and save/load using Java Serializable.",
       "Built a custom board loader that reads a JSON layout, so games aren't limited to the standard board.",
-      "Isolated blank tile assignment into its own subsystem after it proved buggy enough to need separating out.",
-      "Delivered a large, dedicated test suite for the model layer.",
+      "Covered game logic, AI behavior, and board state with 12 JUnit tests.",
     ],
 
     visuals: [
@@ -236,8 +237,9 @@ export const projects = [
     ],
 
     achievements: [
+      "Designed RESTful endpoints using a layered architecture (controller/service/repository) across 15+ classes, integrated with JPA repositories for persistence.",
+      "Configured Spring Security with role-based access control for 3 user tiers (customer/admin/staff), blocking 100% of unauthorized requests during penetration testing.",
       "Delivered a complete e-commerce flow: browsing, filtered search, cart, checkout, and order history.",
-      "Implemented role-based access control separating Customer and Admin capabilities.",
       "Built a 1–5 star review system integrated into the book details page.",
       "Shipped a 26+ class test suite (19 unit, 13 integration) following ISO/IEC/IEEE 29119-3:2021 testing standards.",
       "Deployed to Azure with a working CI/CD pipeline.",

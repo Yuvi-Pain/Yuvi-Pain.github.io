@@ -13,6 +13,7 @@ export default function Nav() {
         {initials}
       </Link>
       <div className="nav__links">
+        <a href={`mailto:${profile.email}`}>Email</a>
         <a href={profile.github} target="_blank" rel="noreferrer">
           GitHub
         </a>
