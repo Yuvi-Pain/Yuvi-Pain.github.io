@@ -1,7 +1,7 @@
 export const profile = {
   name: "Yuvraj Bains",
   role: "Software Engineering Student @ Carleton University",
-  bio: "I like building things that actually work under the hood — systems that talk to each other over a network, apps people click around in, and the occasional game on the side.",
+  bio: "I'm a 4th-year software engineering student at Carleton University, interested in full-stack development and building practical, well-tested software.",
   github: "https://github.com/Yuvi-Pain",
   linkedin: "https://www.linkedin.com/in/yuvraj-bains-a46348252",
   email: "yuvrajbains2003@gmail.com",

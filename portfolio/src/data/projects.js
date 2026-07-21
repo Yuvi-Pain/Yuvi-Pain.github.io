@@ -69,7 +69,7 @@ export const projects = [
     ],
 
     conclusion:
-      "This was a team project (3 members) for a systems programming course. My primary contributions were designing and implementing the Fire Incident subsystem — reading incident data from CSV and reporting it to the Scheduler over UDP — along with the sequence and UML architecture diagrams across iterations.",
+      "This was a team project for a systems programming course, done with 2 other members. I mainly worked on the Fire Incident subsystem, reading incident data from CSV files and sending it to the scheduler over UDP, plus the sequence and UML diagrams for each iteration, as well as unit testing.",
   },
 
   {
@@ -132,7 +132,7 @@ export const projects = [
     ],
 
     conclusion:
-      "MacroSpots went through a real architectural pivot mid-project — from a traditional screen-based single-page app to a map-first design, closer to how modern delivery apps work. That redesign decision, and building the physics-based interactions to support it, is the part of this project I'm most proud of.",
+      "What made this project interesting wasn't just the map; it was making everything underneath it hold together without leaning on a framework. The state store, the bottom sheet's drag physics, and the Macro Fit scoring engine all had to talk to each other cleanly, and getting that right taught me a lot more about state management and interaction design than I expected going in.",
   },
 
   {
@@ -199,7 +199,7 @@ export const projects = [
     ],
 
     conclusion:
-      "This was a 4-person team project (SYSC 3310). The game is a full desktop GUI application — not text-based — with a working AI opponent, undo/redo, and save/load built on a strict MVC foundation.",
+      "By the end, Scrabble came together as a full Java desktop application built around a strict model-view-controller split. The model handled game rules, scoring, and board state; the view rendered the board and player windows, and the controller layer coordinated everything between them. That separation made it possible to add features like undo/redo, save/load, and a custom board loader without the game logic and UI code bleeding into each other, and getting the AI opponent to play by the same rules as a human and to reason about valid word placements on its own ended up being one of the more interesting problems to solve. Working across a 4-person team on something this size was also a good exercise in dividing up a codebase along clean architectural boundaries rather than just splitting files at random.",
   },
 
   {
@@ -268,7 +268,7 @@ export const projects = [
     ],
 
     conclusion:
-      "Working within a 5-person team on a project following formal IEEE/ISTQB testing standards gave me experience with real-world collaborative development. My specific contributions were the book-viewing catalog page, the search functionality, and the reviews UI on the book details page.",
+      "This project ended up looking a lot like a real production system rather than a class assignment: a Spring Boot app split into clear feature modules (inventory, point-of-sale, customer accounts, security), backed by a proper test suite of unit tests and integration tests for nearly every controller, service, and repository. Working under IEEE/ISTQB testing standards meant we couldn't just write code and call it done; every feature needed a test plan behind it, and CI pipelines running through GitHub Actions caught regressions before they reached deployment on Azure. Beyond my own pieces, seeing five people's work merge into one coherent application was a solid look at what it actually takes to keep a codebase organized and tested at that scale.",
   },
 ];
 

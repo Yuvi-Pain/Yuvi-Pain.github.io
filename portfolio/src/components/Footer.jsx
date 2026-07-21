@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__socials-wrap">
-          <p className="footer__hint">psssttt, click on me *</p>
+          <p className="footer__hint">psssttt, click on me</p>
           <div className="footer__socials">
             <a
               className="social-icon"
