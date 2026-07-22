@@ -45,9 +45,8 @@ export const projects = [
     ],
 
     visuals: [
-      { src: "/images/drone/architecture.png", caption: "Final system architecture (Iteration 5 UML)" },
-      { src: "/images/drone/sequence.png", caption: "Message flow between Scheduler, Fire Incident subsystem, and drones" },
-      { src: "/images/drone/state-diagram.png", caption: "Drone lifecycle state machine" },
+      { src: "/images/drone/monitor-with-map.png", caption: "Live Scheduler Monitor — drone states, zone map, and fault reports in real time" },
+      { src: "/images/drone/monitor-compact.png", caption: "Scheduler Monitor mid-run — drones dispatched to pending incidents" },
     ],
 
     challenges: [
@@ -111,7 +110,10 @@ export const projects = [
       "Built a reactive state store from scratch to keep the map, sheet, and filters in sync without React or Vue.",
     ],
 
-    visuals: [],
+    visuals: [
+      { src: "/images/macrospots/map-search.png", caption: "Map view — searching \"Subway\", with quick filters and a live macro score pin" },
+      { src: "/images/macrospots/item-detail.png", caption: "Item detail — full macro breakdown against remaining daily targets" },
+    ],
 
     challenges: [
       {
@@ -177,7 +179,8 @@ export const projects = [
     ],
 
     visuals: [
-      { src: "/images/scrabble/uml.jpg", caption: "MVC architecture (Milestone 4 UML)" },
+      { src: "/images/scrabble/gameplay-full.png", caption: "Full game window — board, scoreboard, and hand tiles" },
+      { src: "/images/scrabble/board-closeup.png", caption: "Board close-up mid-game, showing placed words and premium squares" },
     ],
 
     challenges: [
@@ -246,7 +249,8 @@ export const projects = [
     ],
 
     visuals: [
-      { src: "/images/bookstore/schema.png", caption: "Database schema (ER diagram)" },
+      { src: "/images/bookstore/shop-page.png", caption: "Shop page — browsing, filters, search, and recommendations" },
+      { src: "/images/bookstore/admin-dashboard.png", caption: "Admin dashboard — daily revenue, top-selling books, and category breakdown" },
     ],
 
     challenges: [
